@@ -1,0 +1,29 @@
+{
+  "name": "dev-tinder",
+  "version": "1.0.0",
+  "description": "tinder for dev",
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "backend",
+    "microservice"
+  ],
+  "homepage": "https://github.com/hajimalung/dev-tinder#readme",
+  "bugs": {
+    "url": "https://github.com/hajimalung/dev-tinder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajimalung/dev-tinder.git"
+  },
+  "license": "ISC",
+  "author": "Hajimalung Baba",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
