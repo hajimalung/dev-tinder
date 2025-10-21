@@ -8,12 +8,12 @@ const app = express();
 //callback function takes two params req and res
 //req -> incoming request from the client
 //res -> response which we will send back to the client
-app.use("/",(req,res)=>{
-    res.send("Salam from the server!!!");
-})
-
 app.use("/hello",(req,res)=>{
     res.send("Hello from the server!!!");
+})
+
+app.use("/",(req,res)=>{
+    res.send("Salam from the server!!!");
 })
 
 app.listen(3000, () => {
