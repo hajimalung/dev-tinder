@@ -8,6 +8,10 @@ const app = express();
 //callback function takes two params req and res
 //req -> incoming request from the client
 //res -> response which we will send back to the client
+app.use("/hello/2",(req,res)=>{
+    res.send("Abrakadabra!!!");
+})
+
 app.use("/hello",(req,res)=>{
     res.send("Hello from the server!!!");
 })
