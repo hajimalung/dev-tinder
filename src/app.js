@@ -38,6 +38,10 @@ app.use("/ab?c",(req,res)=>{
     res.send("About us page");
 });
 
+app.use(/.*fly*/,(req,res)=>{
+    res.send("About AB+C us page");
+});
+
 app.use("/",(req,res)=>{
     res.send("Salam from the server!!!");
 })
