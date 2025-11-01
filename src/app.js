@@ -18,6 +18,15 @@ app.use("/hello",(req,res)=>{
 })
 
 app.get("/user", (req,res)=>{
+    console.log("Request Method:", req.method);
+    console.log("Request query:", req.query);
+    res.send({name: "John", age: 30});
+});
+
+//dynamic route
+app.get("/user/:userId/:password", (req,res)=>{
+    console.log("Request Method:", req.method);
+    console.log("Request params:", req.params);
     res.send({name: "John", age: 30});
 });
 
@@ -34,9 +43,9 @@ app.use("/user",(req,res)=>{
 });
 
 // the route string is a regex pattern
-app.use("/ab?c",(req,res)=>{
-    res.send("About us page");
-});
+// app.use("/ab+c",(req,res)=>{
+//     res.send("About us page");
+// });
 
 app.use(/.*fly*/,(req,res)=>{
     res.send("About AB+C us page");
