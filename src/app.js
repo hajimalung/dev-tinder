@@ -13,8 +13,25 @@ app.use("/hello/2",(req,res)=>{
 })
 
 app.use("/hello",(req,res)=>{
-    res.send("Hello from the server!!!");
+    req.method === "GET" ? res.send("Hello GET from the server!!!") :
+    res.send("Hello POST from the server!!!");
 })
+
+app.get("/user", (req,res)=>{
+    res.send({name: "John", age: 30});
+});
+
+app.post("/user", (req,res)=>{
+    res.send("User created successfully!");
+});
+
+app.delete("/user", (req,res)=>{
+    res.send("User deleted successfully!");
+});
+// order of route definitions matter
+app.use("/user",(req,res)=>{
+    res.send("About us page");
+});
 
 app.use("/",(req,res)=>{
     res.send("Salam from the server!!!");
