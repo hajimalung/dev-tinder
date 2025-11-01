@@ -33,6 +33,11 @@ app.use("/user",(req,res)=>{
     res.send("About us page");
 });
 
+// the route string is a regex pattern
+app.use("/ab?c",(req,res)=>{
+    res.send("About us page");
+});
+
 app.use("/",(req,res)=>{
     res.send("Salam from the server!!!");
 })
